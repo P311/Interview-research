@@ -56,8 +56,9 @@ graph TD
      angles were planned, not a hardcoded count). Each worker searches
      ([Tavily](https://tavily.com)) and synthesizes its one angle independently -
      one failing doesn't take the others down.
-   - `synthesize_research` merges all the workers' findings into one company
-     research summary.
+   - `synthesize_research` merges all the workers' findings into short, scannable
+     key points - not a narrative paragraph, which is what this used to produce
+     until it turned into a wall of text nobody read in full.
 6. **Interview prep, a second and independent orchestrator-workers pattern:**
    - `plan_interview` (the orchestrator) waits on both `fit_check` (gap context) and
      `synthesize_research` (company context), then decides which angles are worth a

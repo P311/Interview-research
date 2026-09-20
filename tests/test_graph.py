@@ -39,7 +39,7 @@ def make_fake_extract(num_angles=2, num_interview_angles=1):
         if name == "ResearchFinding":
             return ResearchFinding(angle="a", finding="some finding")
         if name == "CompanyResearch":
-            return CompanyResearch(summary="Acme is a widget company.")
+            return CompanyResearch(key_points=["Acme is a widget company."])
         if name == "InterviewPlan":
             angles = [
                 InterviewAngle(category="technical_depth", focus=f"focus{i}") for i in range(num_interview_angles)

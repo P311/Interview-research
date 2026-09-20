@@ -71,9 +71,11 @@ class ResearchFinding(BaseModel):
 
 
 class CompanyResearch(BaseModel):
-    summary: str
+    # Short scannable facts, not a narrative paragraph - a free-text `summary` field
+    # here used to turn into a dense multi-hundred-word paragraph nobody read in full.
+    key_points: list[str] = Field(min_length=1, max_length=8)
     why_posted: Optional[str] = None
-    recent_news: list[str] = Field(default_factory=list)
+    recent_news: list[str] = Field(default_factory=list, max_length=5)
     culture_notes: Optional[str] = None
     sources: list[str] = Field(default_factory=list)
 

@@ -5,9 +5,13 @@ shape the rest of the pipeline expects."""
 from jobagent.llm import extract
 from jobagent.schemas import CompanyResearch
 
-SYSTEM = """Merge these separate research findings about a company into one coherent \
-summary for a job candidate. Do not add facts beyond what the findings say. If a \
-finding says information is unavailable, don't paper over it."""
+SYSTEM = """Distill these separate research findings about a company into short, \
+scannable key points for a job candidate deciding whether to apply and how to \
+prepare - not a narrative summary. Each point is one short factual sentence (roughly \
+25 words or fewer), not a paragraph cramming several facts together. Only include \
+points that would actually change how a candidate thinks about the company or the \
+interview - skip filler. Do not add facts beyond what the findings say; if a finding \
+says information is unavailable, say so plainly rather than padding around it."""
 
 
 def synthesize_research_node(state):

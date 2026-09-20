@@ -53,7 +53,7 @@ def compile_report_node(state):
     research = state.get("company_research")
     if research:
         lines.append("## Company research")
-        lines.append(research.summary)
+        lines.extend(f"- {p}" for p in research.key_points)
         if research.why_posted:
             lines.append(f"\n**Why this role was posted:** {research.why_posted}")
         if research.recent_news:
