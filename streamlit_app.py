@@ -70,4 +70,7 @@ if run_clicked:
                 st.error(f"Something went wrong: {e}")
 
 if st.session_state.get("report"):
-    st.markdown(st.session_state["report"])
+    # st.markdown treats a $...$ pair as inline LaTeX - escape literal dollar signs
+    # (dollar amounts show up constantly in the company-research section) so they
+    # render as currency, not get parsed as math delimiters.
+    st.markdown(st.session_state["report"].replace("$", r"\$"))
