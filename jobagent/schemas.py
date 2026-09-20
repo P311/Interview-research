@@ -41,13 +41,6 @@ class FitCheck(BaseModel):
     reasoning: str
 
 
-class ResumeTweak(BaseModel):
-    section: str
-    current: str
-    suggested: str
-    reason: str
-
-
 class GapRewriteItem(BaseModel):
     gap: str
     existing_evidence: Optional[str] = None
@@ -58,7 +51,6 @@ class GapRewriteItem(BaseModel):
 
 
 class ResumeFeedback(BaseModel):
-    polish_tweaks: list[ResumeTweak] = Field(default_factory=list)
     gap_reframes: list[GapRewriteItem] = Field(default_factory=list)
     overall_recommendation: str
 

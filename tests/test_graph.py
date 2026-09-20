@@ -19,7 +19,6 @@ from jobagent.schemas import (
     ResearchFinding,
     ResearchPlan,
     ResumeFeedback,
-    ResumeTweak,
 )
 
 FAKE_JD = JobDescription(company="Acme", title="Backend Engineer", summary="s")
@@ -33,10 +32,7 @@ def make_fake_extract(num_angles=2, num_interview_angles=1):
         if name == "FitCheck":
             return FitCheck(fit_score=80, gaps=[], reasoning="r")
         if name == "ResumeFeedback":
-            return ResumeFeedback(
-                polish_tweaks=[ResumeTweak(section="Summary", current="x", suggested="y", reason="z")],
-                overall_recommendation="looks solid",
-            )
+            return ResumeFeedback(overall_recommendation="looks solid")
         if name == "ResearchPlan":
             angles = [ResearchAngle(angle=f"angle{i}", query=f"query{i}") for i in range(num_angles)]
             return ResearchPlan(angles=angles)

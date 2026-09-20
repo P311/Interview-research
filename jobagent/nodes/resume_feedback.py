@@ -6,11 +6,8 @@ situation calls for, conditioned on fit_check's gap analysis already in state.""
 from jobagent.llm import extract
 from jobagent.schemas import ResumeFeedback
 
-SYSTEM = """Give the candidate feedback on their resume for this specific job.
-
-Always include light polish: ATS keyword alignment with the job description's exact \
-terminology, phrasing/emphasis tweaks, reordering bullets to foreground the most \
-relevant experience first.
+SYSTEM = """Give the candidate feedback on how to close the specific gaps between \
+their resume and this job.
 
 You will be given a fixed, numbered list of gaps from a prior analysis. Address \
 EXACTLY those gaps in gap_reframes - one entry per listed gap. Do not invent \

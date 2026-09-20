@@ -62,7 +62,6 @@ def check_resume_feedback(state, n):
     for i in range(n):
         feedback = resume_feedback_node(state)["resume_feedback"]
         print(f"--- trial {i + 1} ---")
-        print(f"  polish_tweaks: {len(feedback.polish_tweaks)}")
         print(f"  gap_reframes: {len(feedback.gap_reframes)}")
         for item in feedback.gap_reframes:
             print(f"    - closes_gap={item.closes_gap!s:5}  confidence={item.confidence:6}  gap={item.gap[:70]!r}")

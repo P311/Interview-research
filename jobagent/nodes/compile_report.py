@@ -35,11 +35,6 @@ def compile_report_node(state):
 
     feedback = state.get("resume_feedback")
     if feedback:
-        if feedback.polish_tweaks:
-            lines.append("## Resume polish")
-            for t in feedback.polish_tweaks:
-                lines.append(f"- **{t.section}**: {t.suggested}  _({t.reason})_")
-            lines.append("")
         if feedback.gap_reframes:
             lines.append("## Closing the gap")
             lines.append("| Gap | Closes it? | Confidence |")

@@ -41,10 +41,12 @@ graph TD
    turned out to be the least reliable thing in the pipeline (categorical flips
    across identical repeated calls, even at temperature 0) and duplicates what
    resume_feedback determines anyway, per gap, after actually attempting a reframe.
-4. **Resume feedback** - always runs. Polish tweaks, plus - for every gap
-   `fit_check` listed, addressed exactly, none invented or skipped - an honest
-   attempt to reframe existing resume content to close it, including saying so when
-   a reframe doesn't actually close the gap.
+4. **Resume feedback** - always runs. For every gap `fit_check` listed, addressed
+   exactly, none invented or skipped - an honest attempt to reframe existing resume
+   content to close it, including saying so when a reframe doesn't actually close the
+   gap. (An earlier version also gave generic "resume polish" tips - ATS keyword
+   alignment, bullet reordering - but that's not what anyone reading the report
+   wanted, so it was cut rather than left in unread.)
 5. **Company research, as an actual orchestrator-workers pattern:**
    - `plan_research` (the orchestrator) decides, per company, which specific angles
      are worth investigating - 1 to 4, varying with the input rather than a fixed
