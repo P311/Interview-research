@@ -16,7 +16,9 @@ def synthesize_interview_prep_node(state):
     if not findings:
         return {"interview_prep": None}
 
-    findings_text = "\n\n".join(f"[{q.category}] {q.question}\n{q.how_to_prepare}" for q in findings)
+    findings_text = "\n\n".join(
+        f"[{q.category}] {q.question}\n" + "\n".join(f"- {tip}" for tip in q.how_to_prepare) for q in findings
+    )
     try:
         notes = extract(system=SYSTEM, user=findings_text, schema=InterviewPrepNotes)
         general_prep_notes = notes.general_prep_notes

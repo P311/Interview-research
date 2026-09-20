@@ -14,8 +14,12 @@ from jobagent.llm import extract
 from jobagent.schemas import InterviewQuestion, InterviewQuestionDraft
 
 SYSTEM = """Write the single sharpest likely interview question for this one specific \
-angle, plus concrete preparation advice for it. Stay focused on this angle only -
-other angles are handled by other passes."""
+angle, plus 1-4 concrete preparation steps for it. Stay focused on this angle only -
+other angles are handled by other passes.
+
+Each preparation step is one short, specific, actionable item (something to look up, \
+rehearse, or build) - not a paragraph. Do not cram multiple tips into one item; split \
+them into separate list entries instead."""
 
 
 def interview_worker_node(state):
@@ -31,6 +35,6 @@ def interview_worker_node(state):
         question = InterviewQuestion(
             question=f"(unavailable for this angle: {angle.focus})",
             category=angle.category,
-            how_to_prepare=f"Unavailable: {e}",
+            how_to_prepare=[f"Unavailable: {e}"],
         )
     return {"interview_findings": [question]}

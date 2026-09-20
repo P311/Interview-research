@@ -46,7 +46,7 @@ def make_fake_extract(num_angles=2, num_interview_angles=1):
             ]
             return InterviewPlan(angles=angles)
         if name == "InterviewQuestionDraft":
-            return InterviewQuestionDraft(question="Q?", how_to_prepare="prep")
+            return InterviewQuestionDraft(question="Q?", how_to_prepare=["prep"])
         if name == "InterviewPrepNotes":
             return InterviewPrepNotes(general_prep_notes="notes")
         raise AssertionError(f"unexpected schema in this test: {schema}")

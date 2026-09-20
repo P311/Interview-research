@@ -81,7 +81,8 @@ def compile_report_node(state):
                 continue
             lines.append(f"### {label}")
             for q in questions:
-                lines.append(f"- {q.question}\n  - {q.how_to_prepare}")
+                lines.append(f"- {q.question}")
+                lines.extend(f"  - {tip}" for tip in q.how_to_prepare)
             lines.append("")
         lines.append(prep.general_prep_notes)
 

@@ -98,13 +98,15 @@ class InterviewPlan(BaseModel):
 
 class InterviewQuestionDraft(BaseModel):
     question: str
-    how_to_prepare: str
+    # Short bullet steps, not a paragraph - a free-text field here used to turn into
+    # one dense run-on paragraph cramming several tips together.
+    how_to_prepare: list[str] = Field(min_length=1, max_length=4)
 
 
 class InterviewQuestion(BaseModel):
     question: str
     category: InterviewCategory
-    how_to_prepare: str
+    how_to_prepare: list[str] = Field(min_length=1, max_length=4)
 
 
 class InterviewPrepNotes(BaseModel):
