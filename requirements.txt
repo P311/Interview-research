@@ -1,0 +1,8 @@
+langgraph>=0.2
+openai>=1.40
+pydantic>=2
+rapidfuzz>=3
+requests>=2.31
+python-dotenv>=1
+pytest>=8
+streamlit>=1.38

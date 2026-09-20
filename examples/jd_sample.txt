@@ -1,0 +1,22 @@
+Backend Engineer - Acme Robotics
+
+Acme Robotics builds warehouse automation robots. We're looking for a Backend
+Engineer to join our fulfillment-systems team.
+
+Responsibilities:
+- Design and maintain services that coordinate robot fleets in real time
+- Build APIs consumed by our operations dashboard and partner integrations
+- Improve reliability and observability of distributed systems running 24/7
+
+Requirements:
+- 5+ years of professional backend software engineering experience
+- Strong Python or Go experience
+- Experience with distributed systems, message queues, and databases at scale
+- Comfortable working directly with hardware/ops teams
+
+Nice to have:
+- Experience with robotics, warehouse, or logistics systems
+- Kubernetes experience
+
+Location: Remote (US)
+Employment type: Full-time

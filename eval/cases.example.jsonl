@@ -1,0 +1,2 @@
+{"id": "example-strong-fit", "jd_text": "See examples/jd_sample.txt for the full text - Backend Engineer at Acme Robotics, 5+ years backend, Python/Go, distributed systems.", "resume_md": "See examples/resume_sample.md - 4 years Python/FastAPI, Kafka, Kubernetes, Go.", "expected": {"fit_score_min": 60, "fit_score_max": 90}}
+{"id": "example-structural-mismatch", "jd_text": "Staff Engineer, 10+ years required, must have prior Staff/Principal title.", "resume_md": "2 years of experience, first job out of school.", "expected": {"fit_score_min": 0, "fit_score_max": 30}}

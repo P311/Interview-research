@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+data/*.db
+.env
+eval/cases.jsonl
+eval/results/
+.pytest_cache/
+
+# Real personal JD/resume used for local testing - not for the public repo.
+/jd.txt
+/resume.md
+
+.claude/
